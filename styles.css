@@ -1,1 +1,104 @@
+html,
+body{
+    margin:0;
+    padding:0;
+}
 
+.main-container{
+    display:grid;
+    height:100vh;
+    width:100vw;
+    grid-template-rows:1fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    border: 1px solid black;
+}
+
+.child1,
+.child2,
+.child3,
+.child4 {
+    border: 1px solid blue;
+}
+
+.top-header{
+    background-color: lightpink;
+    grid-column: 2 /3;
+    grid-row: 1 /2;
+}
+
+
+
+/* Start of styling for the whole left vertical bar */
+
+.left-vertical-bar{
+    background-color: rgb(139, 223, 252);
+    grid-column-start: 1;
+    grid-column-end: 1;
+    grid-row: 1 / 3;
+    display:flex;
+    flex-direction:column;
+}
+
+
+.Dashboard-Logo{
+    display:flex;
+}
+
+.dashboard-icons img {
+    height:100%;
+}
+
+.Group1children,
+.Group2children{
+    display:flex;
+}
+
+.Group-1,
+.Group-2{
+    display:flex;
+    flex-direction: column;
+}
+
+.Dashboard-Logo,
+.Group-1,
+.Group-2{
+    background-color:lightpink;
+    width:100%;
+    margin-bottom:5vh;
+}
+
+/* End of styling for the whole left vertical bar */
+
+
+
+/* Start of the styling for all things contained in the main body of the dashboard */
+
+.main-body{
+    display:flex;
+    background-color: lightsalmon;
+    grid-column:2 / 3;
+    grid-row:2 / 3;
+}
+
+.main-body-left,
+.main-body-right{
+    border:1px solid black;
+}
+
+.main-body-left{
+    flex:8;
+}
+.main-body-right{
+    flex:3;
+}
+
+.card-container{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    grid-template-rows: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive columns */
+    grid-auto-rows: minmax(200px, 1fr);
+    grid-auto-columns: minmax(200px, 1fr);
+    gap: 10px; /* Gap between grid items */
+}
+
+/* End of the styling for all things contained in the main body of the dashboard */
