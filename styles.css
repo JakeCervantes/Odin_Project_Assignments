@@ -1,0 +1,163 @@
+html,
+body{
+    padding:0;
+    margin:0;
+    scrollbar-width: none;
+}
+
+@font-face{
+    font-family: 'Rale-way';
+    src:url(Raleway-Light.ttf);
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.main-container{
+    height:100vh;
+    display:grid;
+    grid-template-rows:minmax(100px, 1fr) minmax(300px,7fr);
+    /* grid-template-columns: minmax(600px, 1fr); */
+}
+
+.row1{
+    background-color: #334155;
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    font-size:1.4rem;
+    border-bottom:1px solid black;
+    box-shadow: 0px 10px 5px 2px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.logo{
+    font-family:'Rale-way', sans-serif;
+    font-weight:bold;
+    color:white;
+    letter-spacing:3px;
+    font-size:2rem;
+
+}
+
+.row2{
+    background-color:#f1f5f9;
+    width:100%;
+    overflow:auto;
+    transition:0.3s;
+    padding:50px;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 20vw)); /* Responsive columns */
+    grid-template-rows: repeat(auto-fit, minmax(200px, 300px)); /* Responsive columns */
+    grid-auto-rows:minmax(200px, 300px);
+    grid-auto-columns: minmax(250px, 20vw);
+    gap: 100px; /* Gap between grid items */
+    scrollbar-width: none;
+
+}
+
+/* Start of Styling to accomadate the form popup */
+
+fieldset{
+    display:flex;
+    flex-direction: column;
+    gap:30px;
+    padding:20px;
+    justify-content: space-evenly;
+    border:none;
+}
+
+fieldset label,
+fieldset input{
+    height:25px;
+    font-family:'Rale-way', sans-serif;
+    font-size:1.4rem;
+}
+
+fieldset label{
+    font-weight:bold;
+}
+
+fieldset div{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:15px;
+}
+.row2-container{
+    display:flex;
+    position:relative;
+    border:2px solid black;
+}
+
+.form-container{
+    display:none;
+    position:absolute;
+    top:10vh;
+    right:10px;
+    background:lightgray;
+    border-radius:20px;
+    background-color: white;
+    font-family:'Custom-Font1', sans-serif;
+    padding: 20px;
+    flex-direction:column;
+    gap: 15px;
+    border: 1px solid black;
+    transition:0.3s;
+    justify-content:space-evenly;
+}
+
+/* End of Styling to accomadate the form popup */
+
+.book-card{
+    border-radius:20px;
+    background-color: white;
+    font-family:'Custom-Font1', sans-serif;
+    padding: 20px;
+    display:flex;
+    flex-direction:column;
+    gap: 15px;
+    border: 1px solid black;
+    transition:0.3s;
+    justify-content:space-evenly;
+}
+
+.book-card:hover,
+.form-container:hover{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    background-color:rgb(248, 248, 248);
+    transform: scale(1.05);
+    cursor:pointer;
+}
+
+
+
+/* Basic button style */
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  /* Hover effect */
+  button:hover {
+    background-color: #2581c1;
+    color: #fff;
+  }
+  
+  /* Focus and active states */
+  button:focus, button:active {
+    outline: none;
+    background-color: #1f7db6;
+    color: #fff;
+  }
