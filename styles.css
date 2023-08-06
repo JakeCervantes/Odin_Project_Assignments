@@ -1,0 +1,37 @@
+.gameboard{
+    display:grid;
+    height:80vh;
+    grid-template-columns: minmax(250px, 20vw) minmax(250px, 20vw) minmax(250px, 20vw);
+    grid-template-rows: minmax(250px, 20vw) minmax(250px, 20vw) minmax(250px, 20vw);
+    gap:40px;
+    justify-content: center;
+    padding:10vh;
+}
+
+.cell1,
+.cell2,
+.cell3,
+.cell4,
+.cell5,
+.cell6,
+.cell7,
+.cell8,
+.cell9{
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:3.5rem;
+}
+
+.cell1:hover,
+.cell2:hover,
+.cell3:hover,
+.cell4:hover,
+.cell5:hover,
+.cell6:hover,
+.cell7:hover,
+.cell8:hover,
+.cell9:hover{
+    cursor:pointer;
+}  
